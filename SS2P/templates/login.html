@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Smart Job Finder</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .btn-google {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            color: #444;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .btn-google:hover {
+            background: #f5f5f5;
+        }
+
+        .btn-google img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .privacy-note {
+            color: #999;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .privacy-note a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔐 Đăng nhập</h1>
+        <p class="subtitle">Sử dụng tài khoản Google để tiếp tục</p>
+
+        <a href="{{ url_for('google_login') }}" class="btn-google">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo">
+            Đăng nhập với Google
+        </a>
+
+        <div class="privacy-note">
+            Bằng cách đăng nhập, bạn đồng ý với
+            <a href="#">Điều khoản dịch vụ</a> và
+            <a href="#">Chính sách bảo mật</a> của chúng tôi.
+        </div>
+
+        <a href="{{ url_for('index') }}" class="back-link">← Quay lại trang chủ</a>
+    </div>
+</body>
+
+</html>
