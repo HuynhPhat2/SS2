@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Job Finder - Trang chủ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-google {
+            display: inline-block;
+            background: #4285f4;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .btn-google:hover {
+            background: #3367d6;
+        }
+
+        .features {
+            margin-top: 30px;
+            text-align: left;
+            color: #555;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎓 Smart Job & Internship Finder</h1>
+        <p>Nền tảng giúp sinh viên tìm kiếm việc làm thêm và thực tập phù hợp với kỹ năng và thời gian biểu.</p>
+
+        <a href="{{ url_for('login') }}" class="btn-google">
+            Bắt đầu ngay →
+        </a>
+
+        <div class="features">
+            <h3>Tính năng nổi bật:</h3>
+            <ul>
+                <li>✨ Gợi ý việc làm thông minh với AI</li>
+                <li>📝 Tạo CV tự động từ profile</li>
+                <li>🔍 Tìm kiếm theo kỹ năng, địa điểm, mức lương</li>
+                <li>💾 Lưu việc làm yêu thích</li>
+                <li>📊 Dashboard theo dõi hoạt động</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
